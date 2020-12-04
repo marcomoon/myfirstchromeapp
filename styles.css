@@ -12,21 +12,6 @@
   }
 }
 
-@keyframes bigger {
-  0% {
-    width: 300px;
-    height: 30px;
-  }
-  50% {
-    width: 400px;
-    height: 60px;
-  }
-  100% {
-    width: 300px;
-    height: 30px;
-  }
-}
-
 body {
   font-family: "Roboto", sans-serif;
   width: 100vw;
@@ -41,7 +26,6 @@ body {
   display: flex;
   justify-content: center;
   animation: fadeIn 1s ease-in-out forwards;
-  animation-delay: 0.5;
 }
 
 .container {
@@ -64,15 +48,6 @@ body {
   font-size: 200px;
 }
 
-.js-form input,
-.js-toDoForm input {
-  border: none;
-  border-bottom: 1px solid gray;
-  background: none;
-  font-size: 25px;
-  margin-top: 25px;
-  caret-color: #fff;
-}
 .js-greetings {
   margin: 40px 0 20px 0;
   font-size: 50px;
@@ -87,12 +62,34 @@ body {
   cursor: default;
 }
 
-input {
+.js-form input {
+  border: none;
+  border-bottom: 1px solid gray;
+  background: none;
+  font-size: 30px;
+  margin-top: 25px;
+  caret-color: #fff;
   transition: transform 1s ease-in-out;
+  color: #fff;
 }
 
-input:focus {
+.js-toDoForm input {
+  border: none;
+  border-bottom: 1px solid gray;
+  background: none;
+  font-size: 20px;
+  margin-top: 25px;
+  caret-color: #fff;
+  transition: transform 1s ease-in-out;
+  color: #fff;
+}
+
+.js-form input:focus {
   transform: scaleX(1.5) scaleY(1.5) translateY(-50%);
+}
+
+.js-toDoForm input:focus {
+  transform: scaleX(1.5) scaleY(1.5) translateY(50%);
 }
 
 .js-weather {
@@ -145,4 +142,8 @@ button:focus {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+.toDoList-container {
+  margin-top: 20px;
 }
